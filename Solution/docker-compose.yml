@@ -1,0 +1,28 @@
+version: "3.8"
+services:
+    projet8-oc:
+        container_name: projet8-oc
+        build:
+            context: ./
+            dockerfile: Dockerfile
+        restart: always
+        volumes:
+          - ./script:/app/script
+        command: jupyter notebook --ip 0.0.0.0 --no-browser --allow-root --NotebookApp.token='superPassword1234'
+        ports:
+          - "8888:8888"
+          - "6006:6006"
+        networks:
+            - p8-network
+           
+        deploy:
+          resources:
+            reservations:
+              devices:
+              - driver: nvidia
+                device_ids: ['0']
+                capabilities: [gpu]
+            
+networks:
+    p8-network:
+        driver: bridge
