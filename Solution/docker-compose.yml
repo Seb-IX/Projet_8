@@ -6,6 +6,7 @@ services:
             context: ./
             dockerfile: Dockerfile
         restart: always
+        env_file: api.env
         volumes:
           - ./script:/app/script
         command: jupyter notebook --ip 0.0.0.0 --no-browser --allow-root --NotebookApp.token='superPassword1234'

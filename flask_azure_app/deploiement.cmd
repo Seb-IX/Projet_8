@@ -1,0 +1,1 @@
+az webapp up --sku B1 --name futur-vision-transport --resource-group ml-studio --location westeurope

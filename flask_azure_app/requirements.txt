@@ -1,0 +1,16 @@
+Flask
+keras
+tensorflow
+pillow
+pandas
+matplotlib
+sklearn
+seaborn
+numpy
+requests
+notebook
+ipywidgets
+pyarrow
+azureml.core
+opencv-contrib-python-headless
+python-dotenv

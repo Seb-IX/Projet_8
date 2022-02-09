@@ -1,3 +1,7 @@
-**/data/**
 **/.ipynb_checkpoints/**
-**/Mask-RCNN-TF2/**
+**/__pycache__/**
+**/.config/**
+Solution/script/data/**
+Ressources/data/**
+**/checkpoint/**
+Solution/api.env
